@@ -69,7 +69,7 @@ if [[ "$1" == "slow" ]]
 then
   ## p1, slow miner
   echo "<<-- Starting slow miner P1"
-  geth --datadir=~/.ethereum2 --rpcapi="eth,net,web3,admin,personal" --rpccorsdomain "*" \
+  geth --datadir=~/.ethereum2 --rpcapi="eth,net,web3,admin,personal,miner" --rpccorsdomain "*" \
   --rpc --rpcport 8545 --rpcaddr "0.0.0.0" --networkid 15 \
   --mine --minerthreads=1 --etherbase=$p2 \
   --nodekey ./nodekeys/nodekey1 \
@@ -80,14 +80,14 @@ then
   ## p2, a client
   echo "<<-- Running client P2:"
   geth  --port 30304 \
-  --rpcapi="eth,net,web3,admin,personal" --rpccorsdomain "*" \
+  --rpcapi="eth,net,web3,admin,personal,miner" --rpccorsdomain "*" \
   --rpc --rpcport 8546 --rpcaddr "0.0.0.0" --networkid 15 \
   --nodekey ./nodekeys/nodekey2 \
   --unlock "${p1},${p2},${p3}" --password "pwd.txt"
 else
   # p3, fast miner
   echo "<<-- Running fast miner P3:"
-  geth --rpcapi="eth,net,web3,admin,personal" --rpccorsdomain "*" \
+  geth --rpcapi="eth,net,web3,admin,personal,miner" --rpccorsdomain "*" \
   --rpc --rpcport 8545 --rpcaddr "0.0.0.0" --networkid 15 \
   --mine --minerthreads=24 --etherbase=$p2 \
   --nodekey ./nodekeys/nodekey3 \
