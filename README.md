@@ -29,17 +29,11 @@ $ geth attach
 
 3. Unfortunately, Charly's organization using PC2 (the stronger miner) has a network issue and is disconnected from the internet. Thus, plug the cable that connects PC1 and PC2 to simulate this network outage. Wait a few seconds and compare the current block numbers again. Do you see a difference? Explain your result.
 
-4. The network outage goes unnoticed. Alice issues the following on PC1 to pay Bob:
-
-`eth.sendTransaction({from: p1, to: p2, value: web3.toWei(0.5, "ether")})`
-
-How much Gas did this transaction cost her? Hint: Use `eth.getBalance`
+4. The network outage goes unnoticed. Alice issues the following on PC1 to pay Bob: `eth.sendTransaction({from: p1, to: p2, value: web3.toWei(0.5, "ether")})`. How much Gas did this transaction cost her? Hint: Use `eth.getBalance`
 
 5. Alice notifies Bob about the transaction and Bob verifies on his end that he received the funds: `eth.getBalance(p2)`. Having been told, that transactions can be considered final after *k* (just a few) blocks/confirmations, he is convinced that his funds are secure. What is the current balance on Bob's account p2?
 
-6. Bob does not notice, that the network issue in Charly's organization is fixed (reconnect the direct link between PC1 and PC2 again, wait a few seconds until blocks are in sync). Therefore, he issues the transaction to pay Charly on PC1:
-
-`eth.sendTransaction({from: p2, to: p3, value: web3.toWei(0.5, "ether")})`
+6. Bob does not notice, that the network issue in Charly's organization is fixed (reconnect the direct link between PC1 and PC2 again, wait a few seconds until blocks are in sync). Therefore, he issues the transaction to pay Charly on PC1: `eth.sendTransaction({from: p2, to: p3, value: web3.toWei(0.5, "ether")})`
 
 7. Again, compare the current block numbers on PC1 and PC2, are they in sync? Explain your result.
 
