@@ -1,4 +1,6 @@
-# Ex11, Blockchain Anomaly
+# ComSys Lab, Ex11: Blockchain Anomaly
+![Anomaly](https://raw.githubusercontent.com/in0rdr/anomaly/master/anomaly.png)
+(source: [1])
 
 ## 1 Preparation
 ```
@@ -46,10 +48,14 @@ eth.sendTransaction({from: p2, to: p3, value: web3.toWei(0.5, "ether")})
 Explain with an example, how the blockchain anomaly can be used to create a double spending situation. If it helps: Think of a specific good you would like to receive twice, without paying twice :)
 
 ## References
-* Natoli, Christopher, and Vincent Gramoli. "The blockchain anomaly." arXiv preprint arXiv:1605.05438 (2016). https://arxiv.org/pdf/1605.05438. Visited in October 2018.
-* Enode URL Format: https://github.com/ethereum/wiki/wiki/enode-url-format. Visited in October 2018.
-* Geth Command Line Options: https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options. Visited in October 2018.
-* Web3 JavaScript API: https://github.com/ethereum/wiki/wiki/JavaScript-API. Visited in October 2018.
+[1] Natoli, Christopher, and Vincent Gramoli. "The blockchain anomaly." arXiv preprint arXiv:1605.05438 (2016). https://arxiv.org/pdf/1605.05438. Visited in October 2018.
+
+[2] Enode URL Format: https://github.com/ethereum/wiki/wiki/enode-url-format. Visited in October 2018.
+
+[3] Geth Command Line Options: https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options. Visited in October 2018.
+
+[4] Web3 JavaScript API: https://github.com/ethereum/wiki/wiki/JavaScript-API. Visited in October 2018.
+
 
 ---
 <sup>1</sup> Without going into details here, Ethereum actually employs a variant of the longest-chain rule, the Greedy Heaviest Observed Subtree algorithm (GHOST)
